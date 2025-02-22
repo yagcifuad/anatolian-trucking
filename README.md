@@ -50,6 +50,7 @@ To enable route optimization:
 4. Run the application
 
 ## Project Structure
+```bash
 src/
 ├── FIREBASE/         # Firebase configuration files
 ├── fxControllers/  # Page and table configuration files
@@ -57,6 +58,7 @@ src/
 ├── model/            # Data models
 ├── utils/            # Utility classes (to read/write data from/to file)
 └── view/             # JavaFX view files 
+```
 
 ## Contributing
 1.Fork the repository and create a feature branch.
@@ -68,12 +70,27 @@ src/
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Screenshots
+### Login Page
 ![Login Page](docs/login.jpg)
+
+### Register Page
 ![Register Page](docs/register.jpg)
+
+### Manager Main Page
 ![Manager Main Page](docs/main.jpg)  
+
+### Manager Destination Page
 ![Manager Destination Page](docs/destination.jpg)
+
+### Manager Profile Page
 ![Manager Profile Page](docs/profile.jpg)
+
+### Data Structure
 ![Data Structure](docs/data_structure.jpg)  
+
+### Database Schema Diagram
 ![Database Schema Diagram](docs/database.jpg)
+
+### Use Case Diagram
 ![Use Case Diagram](docs/usecase_diagram.jpg)  
 
