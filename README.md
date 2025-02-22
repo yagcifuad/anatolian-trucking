@@ -59,10 +59,21 @@ src/
 └── view/             # JavaFX view files 
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+1.Fork the repository and create a feature branch.
+2.Follow code style guidelines (e.g., Java conventions).
+3.Open a Pull Request (PR) for review.
+4.For major changes, open an issue first to discuss your proposal.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Screenshots
+![Login Page](docs/login.jpg)
+![Register Page](docs/register.jpg)
+![Manager Main Page](docs/main.jpg)  
+![Manager Destination Page](docs/destination.jpg)
+![Manager Profile Page](docs/profile.jpg)
+![Data Structure](docs/data_structure.jpg)  
+![Database Schema Diagram](docs/database.jpg)
+![Use Case Diagram](docs/usecase_diagram.jpg)  
 
