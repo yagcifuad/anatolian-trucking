@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxControllers.MainPageManager">
+    <children>
+        <TabPane layoutY="49.0" prefHeight="504.0" prefWidth="1001.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
+            <tabs>
+                <Tab text="User Management">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="426.0" prefWidth="779.0">
+                            <children>
+                                <TableView fx:id="driverTable" layoutY="29.0" prefHeight="412.0" prefWidth="492.0">
+                                    <columns>
+                                        <TableColumn fx:id="colId" prefWidth="75.0" text="id" />
+                                        <TableColumn fx:id="colLogin" prefWidth="75.0" text="login" />
+                                        <TableColumn fx:id="colName" prefWidth="75.0" text="name" />
+                                        <TableColumn fx:id="colSurname" prefWidth="75.0" text="surname" />
+                                        <TableColumn fx:id="colPhoneNum" minWidth="15.0" prefWidth="109.0" text="phone num" />
+                                    </columns>
+                                </TableView>
+                                <TableView fx:id="managerTable" layoutX="511.0" layoutY="29.0" prefHeight="412.0" prefWidth="476.0">
+                                    <columns>
+                                        <TableColumn fx:id="colIdManager" prefWidth="75.0" text="id" />
+                                        <TableColumn fx:id="colLoginManager" prefWidth="75.0" text="login" />
+                                        <TableColumn fx:id="colNameManager" prefWidth="75.0" text="name" />
+                                        <TableColumn fx:id="colSurnameManager" prefWidth="75.0" text="surname" />
+                                        <TableColumn fx:id="colPhoneNumManager" minWidth="15.0" prefWidth="104.0" text="phone num" />
+                                    </columns>
+                                </TableView>
+                                <Text layoutX="30.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drivers" />
+                                <Text layoutX="608.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Managers" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Cargo Management">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="cargoTitleField" layoutX="619.0" layoutY="62.0" promptText="Cargo Title" />
+                                <TextField fx:id="cargoWeightField" layoutX="619.0" layoutY="105.0" promptText="Cargo Weight" />
+                                <TextArea fx:id="cargoDescriptionField" layoutX="620.0" layoutY="243.0" prefHeight="72.0" prefWidth="200.0" promptText="Description" />
+                                <TextField fx:id="cargoCustomerField" layoutX="619.0" layoutY="149.0" promptText="Customer" />
+                                <Button layoutX="635.0" layoutY="365.0" mnemonicParsing="false" onAction="#createCargo" text="Create" />
+                                <Button layoutX="702.0" layoutY="365.0" mnemonicParsing="false" onAction="#editCargo" text="Update" />
+                                <Button layoutX="776.0" layoutY="365.0" mnemonicParsing="false" onAction="#deleteCargo" text="Delete" />
+                                <Label layoutX="237.0" layoutY="23.0" prefHeight="17.0" prefWidth="106.0" text="Current Cargo List" />
+                                <ComboBox fx:id="cargoTypeField" layoutX="619.0" layoutY="328.0" prefWidth="150.0" />
+                                <Label layoutX="618.0" layoutY="23.0" prefHeight="17.0" prefWidth="106.0" text="Create New Cargo" />
+                                <TableView fx:id="cargoTable" layoutX="14.0" layoutY="49.0" prefHeight="352.0" prefWidth="590.0">
+                                    <columns>
+                                        <TableColumn fx:id="colIDCargo" prefWidth="34.0" text="ID" />
+                                        <TableColumn fx:id="colTitleCargo" prefWidth="66.0" text="Title" />
+                                        <TableColumn fx:id="colCreatedCargo" prefWidth="83.0" text="Created " />
+                                        <TableColumn fx:id="colUpdatedCargo" prefWidth="81.0" text="Updated" />
+                                        <TableColumn fx:id="colWeightCargo" prefWidth="54.0" text="Weight" />
+                                        <TableColumn fx:id="colTypeCargo" prefWidth="68.0" text="Type" />
+                                        <TableColumn fx:id="colCustomerCargo" prefWidth="64.0" text="Customer" />
+                                        <TableColumn fx:id="colDescriptionCargo" prefWidth="73.0" text="Description" />
+                                        <TableColumn fx:id="colDestinationCargo" prefWidth="66.0" text="Destination" />
+                                    </columns>
+                                </TableView>
+                                <TextField fx:id="cargoDestinationField" layoutX="622.0" layoutY="187.0" promptText="Destination" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Truck Management">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="makeField" layoutX="685.0" layoutY="86.0" promptText="Enter make" />
+                                <TextField fx:id="modelField" layoutX="685.0" layoutY="125.0" promptText="Enter model" />
+                                <TextField fx:id="yearField" layoutX="685.0" layoutY="164.0" promptText="Enter Year" />
+                                <TextField fx:id="odometerField" layoutX="861.0" layoutY="86.0" prefHeight="26.0" prefWidth="104.0" promptText="km" />
+                                <TextField fx:id="tankCapacityField" layoutX="861.0" layoutY="138.0" prefHeight="26.0" prefWidth="109.0" promptText="litres" />
+                                <ComboBox fx:id="tyreTypeField" layoutX="690.0" layoutY="201.0" prefWidth="150.0" promptText="Tyre Type" />
+                                <Label layoutX="23.0" layoutY="21.0" text="Company Owned Trucks" />
+                                <Label layoutX="861.0" layoutY="62.0" text="Odometer:" />
+                                <Label layoutX="861.0" layoutY="117.0" text="Fuel Tank Capacity:" />
+                                <Button layoutX="881.0" layoutY="250.0" mnemonicParsing="false" onAction="#createTruck" prefHeight="26.0" prefWidth="77.0" text="Add" />
+                                <Button layoutX="785.0" layoutY="250.0" mnemonicParsing="false" onAction="#editTruck" prefHeight="26.0" prefWidth="76.0" text="Update" />
+                                <Button layoutX="690.0" layoutY="250.0" mnemonicParsing="false" onAction="#deleteTruck" prefHeight="26.0" prefWidth="83.0" text="Delete" />
+                                <TableView fx:id="truckTable" layoutX="16.0" layoutY="45.0" prefHeight="403.0" prefWidth="656.0">
+                                    <columns>
+                                        <TableColumn fx:id="colIDTruck" prefWidth="39.0" text="ID" />
+                                        <TableColumn fx:id="colMakeTruck" prefWidth="88.0" text="Make" />
+                                        <TableColumn fx:id="colModelTruck" prefWidth="93.0" text="Model" />
+                                        <TableColumn fx:id="colModelYear" prefWidth="67.0" text="Year" />
+                                        <TableColumn fx:id="colOdometerTruck" prefWidth="77.0" text="Odometer" />
+                                        <TableColumn fx:id="colTankTruck" prefWidth="82.0" text="Tank" />
+                                        <TableColumn fx:id="colTyreTruck" prefWidth="66.0" text="Tyre" />
+                                        <TableColumn fx:id="colDestinationTruck" prefWidth="142.0" text="Current Destination" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Destination Management">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="569.0" prefWidth="991.0">
+                            <children>
+                                <Label layoutX="30.0" layoutY="15.0" prefHeight="17.0" prefWidth="85.0" text="Destinations" />
+                                <TextField fx:id="startCityField" layoutX="17.0" layoutY="331.0" promptText="Start City" />
+                                <TextField fx:id="endCityField" layoutX="186.0" layoutY="331.0" promptText="End City" />
+                                <TextField fx:id="startLongitudeField" disable="true" layoutX="17.0" layoutY="368.0" promptText="Start longitude" />
+                                <TextField fx:id="endLongitudeField" disable="true" layoutX="186.0" layoutY="368.0" promptText="End longitude" />
+                                <TextField fx:id="startLatitudeField" layoutX="17.0" layoutY="401.0" promptText="Start latitude" />
+                                <TextField fx:id="endLatitudeField" layoutX="186.0" layoutY="401.0" promptText="End Latitude" />
+                                <Button layoutX="660.0" layoutY="388.0" mnemonicParsing="false" onAction="#destinationCreateButton" text="Create" />
+                                <Button layoutX="597.0" layoutY="388.0" mnemonicParsing="false" onAction="#destinationDeleteButton" text="Delete" />
+                                <Button layoutX="537.0" layoutY="388.0" mnemonicParsing="false" onAction="#destinationUpdateButton" prefHeight="26.0" prefWidth="53.0" text="Edit" />
+                                <ListView fx:id="checkPointListView" layoutX="730.0" layoutY="48.0" prefHeight="273.0" prefWidth="251.0" />
+                                <Label layoutX="779.0" layoutY="17.0" text="Check Point List" />
+                                <TextField fx:id="checkPointTitleField" layoutX="749.0" layoutY="344.0" prefHeight="26.0" prefWidth="236.0" promptText="Checkpoint Title" />
+                                <RadioButton fx:id="isLong" layoutX="934.0" layoutY="385.0" mnemonicParsing="false" text="Long" />
+                                <DatePicker fx:id="arrivedDateField" layoutX="761.0" layoutY="381.0" prefHeight="26.0" prefWidth="160.0" />
+                                <Button fx:id="checkpointCreateButton" layoutX="921.0" layoutY="420.0" mnemonicParsing="false" onAction="#checkpointCreateButton" text="Create" />
+                                <Button fx:id="checkpointEditButton" layoutX="803.0" layoutY="420.0" mnemonicParsing="false" onAction="#checkpointEditButton" text="Edit" />
+                                <Button fx:id="checkpointDeleteButton" layoutX="855.0" layoutY="420.0" mnemonicParsing="false" onAction="#checkpointDeleteButton1" text="Delete" />
+                                <TableView fx:id="destinationTable" layoutX="13.0" layoutY="47.0" onMouseClicked="#destinationSelectClick" prefHeight="275.0" prefWidth="701.0">
+                                    <columns>
+                                        <TableColumn fx:id="colIDDestination" prefWidth="33.0" text="ID" />
+                                        <TableColumn fx:id="colStartCityDestination" prefWidth="82.0" text="Start City" />
+                                        <TableColumn fx:id="colEndCityDestination" prefWidth="87.0" text="End city" />
+                                        <TableColumn fx:id="colManagerDestination" prefWidth="71.0" text="Manager" />
+                                        <TableColumn fx:id="colDriverDestination" prefWidth="78.0" text="Driver" />
+                                        <TableColumn fx:id="colTruckDestination" prefWidth="66.0" text="Truck" />
+                                        <TableColumn fx:id="colCargoDestination" prefWidth="71.0" text="Cargo" />
+                                        <TableColumn fx:id="colStatusDestination" prefWidth="61.0" text="Status" />
+                                        <TableColumn fx:id="colArrivalDestination" prefWidth="69.0" text="Arrival" />
+                                        <TableColumn fx:id="colDepartureDestination" prefWidth="75.0" text="Departure" />
+                                    </columns>
+                                </TableView>
+                                <ComboBox fx:id="managerComboBox" disable="true" layoutX="372.0" layoutY="433.0" prefWidth="150.0" promptText="Manager List" />
+                                <ComboBox fx:id="cargoComboBox" layoutX="372.0" layoutY="401.0" prefWidth="150.0" promptText="Cargo List" />
+                                <ComboBox fx:id="driverComboBox" layoutX="372.0" layoutY="368.0" prefWidth="150.0" promptText=" Driver List" />
+                                <ComboBox fx:id="truckComboBox" layoutX="372.0" layoutY="337.0" prefWidth="150.0" promptText=" Truck List" />
+                                <DatePicker fx:id="departureField" layoutX="17.0" layoutY="433.0" prefHeight="26.0" prefWidth="160.0" promptText="Departure " />
+                                <DatePicker fx:id="arrivalField" layoutX="188.0" layoutY="433.0" prefHeight="26.0" prefWidth="156.0" promptText="Arrival" />
+                                <Button fx:id="searchDestinationButton" layoutX="659.0" layoutY="427.0" mnemonicParsing="false" onAction="#searchDestinationButton" text="Search" />
+                                <ComboBox fx:id="destinationStatusField" layoutX="537.0" layoutY="337.0" prefHeight="26.0" prefWidth="176.0" promptText="Status" />
+                                <Button layoutX="600.0" layoutY="427.0" mnemonicParsing="false" onAction="#clearDestinationButton" text="Clear" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="forumButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#forumButton" text="Forum" />
+        <Button fx:id="returnButton2" layoutX="862.0" layoutY="15.0" mnemonicParsing="false" onAction="#returnToPrevious2" prefHeight="26.0" prefWidth="79.0" text="Return" />
+        <Label layoutX="446.0" layoutY="20.0" text="Manager Control Page" />
+        <ImageView fx:id="photoView" fitHeight="38.0" fitWidth="36.0" layoutX="951.0" layoutY="8.0" onMouseClicked="#profileButton" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>

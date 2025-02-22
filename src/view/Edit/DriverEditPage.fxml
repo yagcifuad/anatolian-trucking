@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="250.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxControllers.EditPages.DriverEditPage">
+    <children>
+        <TextField fx:id="loginField" layoutX="43.0" layoutY="32.0" prefHeight="26.0" prefWidth="186.0" promptText="login" />
+        <TextField fx:id="nameField" layoutX="43.0" layoutY="69.0" prefHeight="26.0" prefWidth="186.0" promptText="name" />
+        <TextField fx:id="surnameField" layoutX="43.0" layoutY="105.0" prefHeight="26.0" prefWidth="186.0" promptText="surname" />
+        <PasswordField fx:id="pswField" layoutX="43.0" layoutY="142.0" prefHeight="26.0" prefWidth="186.0" promptText="password" />
+        <DatePicker fx:id="bDateField" layoutX="261.0" layoutY="33.0" promptText="birth date" />
+        <TextField fx:id="phoneNumField" layoutX="43.0" layoutY="183.0" prefHeight="26.0" prefWidth="186.0" promptText="phone number" />
+        <DatePicker fx:id="medCertField" layoutX="261.0" layoutY="70.0" promptText="med certificate date" />
+        <TextField fx:id="medCertNum" layoutX="261.0" layoutY="105.0" prefHeight="26.0" prefWidth="186.0" promptText="med certificate number" />
+        <TextField fx:id="driverLicenseField" layoutX="261.0" layoutY="142.0" prefHeight="26.0" prefWidth="186.0" promptText="driving licence" />
+        <Button layoutX="397.0" layoutY="196.0" mnemonicParsing="false" onAction="#editDriver" prefHeight="26.0" prefWidth="62.0" text="EDIT" />
+    </children>
+</AnchorPane>

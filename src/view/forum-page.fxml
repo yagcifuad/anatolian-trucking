@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxControllers.ForumPage">
+   <children>
+      <TextArea fx:id="commentField" layoutX="272.0" layoutY="235.0" prefHeight="102.0" prefWidth="303.0" promptText="Comment" />
+      <Button layoutX="508.0" layoutY="350.0" mnemonicParsing="false" onAction="#commentSentButton" prefHeight="24.0" prefWidth="67.0" text="Send" />
+      <Text layoutX="33.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forum" />
+      <Button fx:id="returnFromForumButton" layoutX="532.0" layoutY="9.0" mnemonicParsing="false" onAction="#returnFromForum" text="Return" />
+      <TextField fx:id="forumTitleField" layoutX="14.0" layoutY="317.0" prefHeight="26.0" prefWidth="239.0" promptText="Forum Title" />
+      <Button layoutX="398.0" layoutY="350.0" mnemonicParsing="false" onAction="#commentEditButton" text="Edit" />
+      <Button layoutX="446.0" layoutY="350.0" mnemonicParsing="false" onAction="#commentDeleteButton" prefHeight="26.0" prefWidth="53.0" text="Delete" />
+      <TableView fx:id="forumTable" layoutX="14.0" layoutY="44.0" onMouseClicked="#tableSelected" prefHeight="263.0" prefWidth="239.0">
+        <columns>
+          <TableColumn fx:id="colForumTitle" prefWidth="238.0" text="Titles" />
+        </columns>
+      </TableView>
+      <Button layoutX="199.0" layoutY="360.0" mnemonicParsing="false" onAction="#createForumTitleButton" text="Create" />
+      <ListView fx:id="commentListField" layoutX="272.0" layoutY="45.0" prefHeight="178.0" prefWidth="303.0" />
+      <Button layoutX="87.0" layoutY="360.0" mnemonicParsing="false" onAction="#editForumButton" text="Edit" />
+      <Button layoutX="134.0" layoutY="360.0" mnemonicParsing="false" onAction="#deleteForumTitleButton" text="Delete" />
+   </children>
+</AnchorPane>

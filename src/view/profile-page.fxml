@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxControllers.ProfilePage">
+    <children>
+        <TextField fx:id="loginField" layoutX="251.0" layoutY="77.0" prefHeight="26.0" prefWidth="186.0" promptText="login" />
+        <TextField fx:id="nameField" layoutX="251.0" layoutY="116.0" prefHeight="26.0" prefWidth="186.0" promptText="name" />
+        <PasswordField fx:id="pswField" layoutX="251.0" layoutY="154.0" prefHeight="26.0" prefWidth="186.0" promptText="password" />
+        <TextField fx:id="managerEmailField" layoutX="251.0" layoutY="187.0" prefHeight="26.0" prefWidth="186.0" promptText="manager email" />
+        <RadioButton fx:id="radioD" layoutX="371.0" layoutY="29.0" mnemonicParsing="false" onAction="#disableFields" text="Driver">
+            <toggleGroup>
+                <ToggleGroup fx:id="userType" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="radioM" layoutX="272.0" layoutY="29.0" mnemonicParsing="false" onAction="#disableFields" text="Manager" toggleGroup="$userType" />
+        <CheckBox fx:id="isAdminChk" layoutX="507.0" layoutY="81.0" mnemonicParsing="false" text="is admin" />
+        <TextField fx:id="driverLicenseField" layoutX="251.0" layoutY="226.0" prefHeight="26.0" prefWidth="186.0" promptText="driving licence" />
+        <Button layoutX="515.0" layoutY="19.0" mnemonicParsing="false" onAction="#returnToPrevious" prefHeight="26.0" prefWidth="62.0" text="Return" />
+        <Label fx:id="photoField" layoutX="272.0" layoutY="345.0" prefHeight="18.0" prefWidth="178.0" text="Label" />
+        <Button layoutX="447.0" layoutY="341.0" mnemonicParsing="false" onAction="#photoChooseButton" text="Choose" />
+      <ImageView fx:id="photoView" fitHeight="194.0" fitWidth="165.0" layoutX="30.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" />
+        <!--      <Icon fx:id="photoView" content="HELP_OUTLINE" layoutX="317.0" layoutY="296.0" prefHeight="58.0" prefWidth="71.0" />-->
+    </children>
+</AnchorPane>

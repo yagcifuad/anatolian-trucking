@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxControllers.MainPageDriver">
+    <children>
+        <TabPane layoutY="49.0" prefHeight="504.0" prefWidth="1001.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
+            <tabs>
+                <Tab text="Destinations">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="569.0" prefWidth="991.0">
+                            <children>
+                                <Label layoutX="30.0" layoutY="15.0" prefHeight="17.0" prefWidth="85.0" text="Destinations" />
+                                <Button layoutX="311.0" layoutY="350.0" mnemonicParsing="false" onAction="#destinationUpdateButton" prefHeight="26.0" prefWidth="53.0" text="Edit" />
+                                <ListView fx:id="checkPointListView" layoutX="730.0" layoutY="48.0" prefHeight="273.0" prefWidth="251.0" />
+                                <Label layoutX="779.0" layoutY="17.0" text="Check Point List" />
+                                <TextField fx:id="checkPointTitleField" layoutX="749.0" layoutY="344.0" prefHeight="26.0" prefWidth="236.0" promptText="Checkpoint Title" />
+                                <RadioButton fx:id="isLong" layoutX="934.0" layoutY="385.0" mnemonicParsing="false" text="Long" />
+                                <DatePicker fx:id="arrivedDateField" layoutX="761.0" layoutY="381.0" prefHeight="26.0" prefWidth="160.0" />
+                                <Button layoutX="921.0" layoutY="420.0" mnemonicParsing="false" onAction="#checkpointCreateButton3" text="Create" />
+                                <TableView fx:id="destinationTable1" layoutX="13.0" layoutY="47.0" onMouseClicked="#destinationSelectClick" prefHeight="275.0" prefWidth="701.0">
+                                    <columns>
+                                        <TableColumn fx:id="colIDDestination" prefWidth="33.0" text="ID" />
+                                        <TableColumn fx:id="colStartCityDestination" prefWidth="82.0" text="Start City" />
+                                        <TableColumn fx:id="colEndCityDestination" prefWidth="87.0" text="End city" />
+                                        <TableColumn fx:id="colManagerDestination" prefWidth="71.0" text="Manager" />
+                                        <TableColumn fx:id="colDriverDestination" prefWidth="78.0" text="Driver" />
+                                        <TableColumn fx:id="colTruckDestination" prefWidth="66.0" text="Truck" />
+                                        <TableColumn fx:id="colCargoDestination" prefWidth="71.0" text="Cargo" />
+                                        <TableColumn fx:id="colStatusDestination" prefWidth="61.0" text="Status" />
+                                        <TableColumn fx:id="colArrivalDestination" prefWidth="69.0" text="Arrival" />
+                                        <TableColumn fx:id="colDepartureDestination" prefWidth="75.0" text="Departure" />
+                                    </columns>
+                                </TableView>
+                                <ComboBox fx:id="truckComboBox" layoutX="56.0" layoutY="350.0" prefWidth="150.0" promptText=" Truck List" />
+                                <ComboBox fx:id="destinationStatusField" layoutX="56.0" layoutY="390.0" prefHeight="26.0" prefWidth="176.0" promptText="Status" />
+                        <Button layoutX="375.0" layoutY="350.0" mnemonicParsing="false" onAction="#destinationTakeButton" prefHeight="26.0" prefWidth="53.0" text="Take" />
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+            <Tab text="Tasks">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="226.0" layoutY="27.0" text="Task List" />
+                        <TextArea fx:id="taskArea" layoutX="36.0" layoutY="52.0" prefHeight="333.0" prefWidth="579.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="forumButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#forumButton" text="Forum" />
+        <Button fx:id="returnButton2" layoutX="862.0" layoutY="15.0" mnemonicParsing="false" onAction="#returnToPrevious2" prefHeight="26.0" prefWidth="79.0" text="Return" />
+        <Label layoutX="469.0" layoutY="19.0" text="Driver Page" />
+        <ImageView fx:id="photoView" fitHeight="38.0" fitWidth="36.0" layoutX="951.0" layoutY="8.0" onMouseClicked="#profileButton" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>
